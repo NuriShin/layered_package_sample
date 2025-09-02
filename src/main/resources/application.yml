@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: layered
+
+logging:
+  config: classpath:logback-spring.xml
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.example.layered.model
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 30
+    jdbc-type-for-null: NULL

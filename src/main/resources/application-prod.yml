@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@prod-db:1521:PRODDB
+    username: layered_prod
+    password: ${DB_PASSWORD}
+    hikari:
+      pool-name: LayeredProdPool
+      maximum-pool-size: 50
+      minimum-idle: 10
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      leak-detection-threshold: 60000
+
+logging:
+  level:
+    com.example.layered: WARN
+    org.springframework.security: ERROR

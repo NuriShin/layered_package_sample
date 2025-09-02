@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@staging-db:1521:STGDB
+    username: layered_staging
+    password: ${DB_PASSWORD}
+    hikari:
+      pool-name: LayeredStagingPool
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      leak-detection-threshold: 60000
+
+logging:
+  level:
+    com.example.layered: INFO
+    org.springframework.security: WARN

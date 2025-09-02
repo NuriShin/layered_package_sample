@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521/freepdb1
+    username: nomubi
+    password: 1111
+    hikari:
+      pool-name: LayeredLocalPool
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      leak-detection-threshold: 60000
+
+logging:
+  level:
+    com.example.layered: DEBUG
+    org.mybatis: DEBUG
+    org.springframework.security: DEBUG

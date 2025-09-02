@@ -1,0 +1,67 @@
+2025-09-02 12:37:50.360 [main] INFO  c.example.layered.LayeredApplication - Starting LayeredApplication using Java 21.0.8 with PID 99522 (/Users/nurishin/workspace/personal/layered/build/classes/java/main started by nurishin in /Users/nurishin/workspace/personal/layered)
+2025-09-02 12:37:50.362 [main] DEBUG c.example.layered.LayeredApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-09-02 12:37:50.362 [main] INFO  c.example.layered.LayeredApplication - The following 1 profile is active: "local"
+2025-09-02 12:37:50.696 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/nurishin/workspace/personal/layered/build/classes/java/main/com/example/layered/project/mapper/ProjectMapper.class]
+2025-09-02 12:37:50.696 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'projectMapper' and 'com.example.layered.project.mapper.ProjectMapper' mapperInterface
+2025-09-02 12:37:50.697 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'projectMapper'.
+2025-09-02 12:37:51.044 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-02 12:37:51.058 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-02 12:37:51.058 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-09-02 12:37:51.080 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-02 12:37:51.080 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 701 ms
+2025-09-02 12:37:51.299 [main] DEBUG o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/nurishin/workspace/personal/layered/build/resources/main/mapper/project/ProjectMapper.xml]'
+2025-09-02 12:37:51.398 [main] DEBUG c.e.l.common.aspect.LoggingAspect - Executing service method: WebConfig.addInterceptors
+2025-09-02 12:37:51.398 [main] DEBUG c.e.l.common.aspect.LoggingAspect - Service method WebConfig.addInterceptors completed in 1 ms
+2025-09-02 12:37:51.399 [main] DEBUG c.e.l.common.aspect.LoggingAspect - Executing service method: WebConfig.addCorsMappings
+2025-09-02 12:37:51.400 [main] DEBUG c.e.l.common.aspect.LoggingAspect - Service method WebConfig.addCorsMappings completed in 1 ms
+2025-09-02 12:37:51.739 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 2571143b-ee9a-4367-9f39-55090c77dad3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-02 12:37:51.743 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-02 12:37:51.816 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-09-02 12:37:51.886 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-02 12:37:51.891 [main] INFO  c.example.layered.LayeredApplication - Started LayeredApplication in 1.808 seconds (process running for 2.183)
+2025-09-02 12:39:13.008 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-02 12:39:13.047 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-02 12:39:19.800 [Test worker] INFO  c.e.l.p.service.ProjectServiceTest - Starting ProjectServiceTest using Java 21.0.8 with PID 99558 (started by nurishin in /Users/nurishin/workspace/personal/layered)
+2025-09-02 12:39:19.801 [Test worker] DEBUG c.e.l.p.service.ProjectServiceTest - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-09-02 12:39:19.801 [Test worker] INFO  c.e.l.p.service.ProjectServiceTest - The following 1 profile is active: "local"
+2025-09-02 12:39:20.155 [Test worker] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/nurishin/workspace/personal/layered/build/classes/java/main/com/example/layered/project/mapper/ProjectMapper.class]
+2025-09-02 12:39:20.156 [Test worker] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'projectMapper' and 'com.example.layered.project.mapper.ProjectMapper' mapperInterface
+2025-09-02 12:39:20.157 [Test worker] DEBUG o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'projectMapper'.
+2025-09-02 12:39:20.620 [Test worker] DEBUG o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [/Users/nurishin/workspace/personal/layered/build/resources/main/mapper/project/ProjectMapper.xml]'
+2025-09-02 12:39:20.831 [Test worker] DEBUG c.e.l.common.aspect.LoggingAspect - Executing service method: WebConfig.addInterceptors
+2025-09-02 12:39:20.831 [Test worker] DEBUG c.e.l.common.aspect.LoggingAspect - Service method WebConfig.addInterceptors completed in 1 ms
+2025-09-02 12:39:20.833 [Test worker] DEBUG c.e.l.common.aspect.LoggingAspect - Executing service method: WebConfig.addCorsMappings
+2025-09-02 12:39:20.834 [Test worker] DEBUG c.e.l.common.aspect.LoggingAspect - Service method WebConfig.addCorsMappings completed in 1 ms
+2025-09-02 12:39:21.292 [Test worker] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: f245d7cd-6c1b-4990-b5fb-ed2346eee326
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-02 12:39:21.302 [Test worker] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-02 12:39:21.432 [Test worker] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-09-02 12:39:21.561 [Test worker] INFO  c.e.l.p.service.ProjectServiceTest - Started ProjectServiceTest in 1.969 seconds (process running for 2.501)
+2025-09-02 12:39:22.034 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - LayeredLocalPool - Starting...
+2025-09-02 12:39:22.603 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - LayeredLocalPool - Added connection oracle.jdbc.driver.T4CConnection@644c3590
+2025-09-02 12:39:22.604 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - LayeredLocalPool - Start completed.
+2025-09-02 12:39:22.607 [Test worker] DEBUG c.e.l.common.aspect.LoggingAspect - Executing service method: ProjectService.findByIds
+2025-09-02 12:39:22.609 [Test worker] DEBUG c.e.l.common.aspect.LoggingAspect - Executing service method: ProjectMapper.select
+2025-09-02 12:39:22.612 [Test worker] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-09-02 12:39:22.614 [Test worker] DEBUG org.mybatis.spring.SqlSessionUtils - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b69ff13]
+2025-09-02 12:39:22.633 [Test worker] DEBUG o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1839754904 wrapping oracle.jdbc.driver.T4CConnection@644c3590] will be managed by Spring
+2025-09-02 12:39:22.636 [Test worker] DEBUG c.e.l.p.mapper.ProjectMapper.select - ==>  Preparing: SELECT ID, NAME, PAY, SUPERVISOR_ID, CREATEDAT FROM PROJECT WHERE ( ID = ? )
+2025-09-02 12:39:22.685 [Test worker] DEBUG c.e.l.p.mapper.ProjectMapper.select - ==> Parameters: 1(Integer)
+2025-09-02 12:39:22.866 [Test worker] DEBUG c.e.l.p.mapper.ProjectMapper.select - <==      Total: 1
+2025-09-02 12:39:22.871 [Test worker] DEBUG org.mybatis.spring.SqlSessionUtils - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b69ff13]
+2025-09-02 12:39:22.871 [Test worker] DEBUG c.e.l.common.aspect.LoggingAspect - Service method ProjectMapper.select completed in 262 ms
+2025-09-02 12:39:22.871 [Test worker] DEBUG c.e.l.common.aspect.LoggingAspect - Service method ProjectService.findByIds completed in 264 ms
+2025-09-02 12:39:22.871 [Test worker] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b69ff13]
+2025-09-02 12:39:22.871 [Test worker] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b69ff13]
+2025-09-02 12:39:22.872 [Test worker] DEBUG org.mybatis.spring.SqlSessionUtils - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b69ff13]
+2025-09-02 12:39:22.895 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - LayeredLocalPool - Shutdown initiated...
+2025-09-02 12:39:22.908 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - LayeredLocalPool - Shutdown completed.
