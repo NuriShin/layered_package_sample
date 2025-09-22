@@ -5,17 +5,39 @@
 <mapper namespace="com.example.layered.project.mapper.ProjectMapper">
 
     <!-- 프로젝트 입력 -->
-    <select id="insert" parameterType="com.example.layered.project.domain.Project"
-            resultType="Long">
-        INSERT INTO PROJECT
-            (NAME, SUPERVISOR_ID, PAY, CREATEDAT)
-        VALUES(#{name}, #{supervisorId, jdbcType=VARCHAR}, #{pay}, #{createdAt})
-    </select>
+    <insert id="insert"
+            parameterType="com.example.layered.project.domain.Project"
+            useGeneratedKeys="true"
+            keyProperty="id"
+            keyColumn="ID">
+        INSERT INTO PROJECT (NAME, SUPERVISOR_ID, PAY, CREATEDAT)
+        VALUES (#{name}, #{supervisorId}, #{pay}, #{createdAt})
+    </insert>
 
-    <!-- 단일 프로젝트 조회 -->
+
+    <!-- 프로젝트 수정 -->
+    <update id="update" parameterType="java.util.List">
+        <foreach collection="list" item="project" separator=";">
+            UPDATE PROJECT
+            <set>
+                <if test="project.name != null">
+                    NAME = #{project.name},
+                </if>
+                <if test="project.supervisorId != null">
+                    SUPERVISOR_ID = #{project.supervisorId, jdbcType=VARCHAR},
+                </if>
+                <if test="project.pay != null">
+                    PAY = #{project.pay},
+                </if>
+            </set>
+            WHERE ID = #{project.id}
+        </foreach>
+    </update>
+
+    <!-- 프로젝트 조회 단건 -->
     <select id="select"
-            parameterType="java.util.List"
-            resultType="com.example.layered.project.dto.response.ProjectResponse">
+            parameterType="com.example.layered.project.dto.request.SearchProjectCondition"
+            resultType="com.example.layered.project.dto.response.SearchProjectResponse">
         SELECT
         ID,
         NAME,
@@ -24,26 +46,53 @@
         CREATEDAT
         FROM PROJECT
         <where>
-            <foreach collection="list"
-                     item="cond"
-                     separator=" OR ">
-                (
-                <if test="cond.id != null">
-                    ID = #{cond.id}
-                </if>
-                <if test="cond.name != null">
-                    AND NAME = #{cond.name}
-                </if>
-                <if test="cond.supervisorId != null">
-                    AND SUPERVISOR_ID = #{cond.supervisorId}
-                </if>
-                <if test="cond.pay != null and cond.pay &gt;= 0">
-                    AND PAY = #{cond.pay}
-                </if>
-                )
-            </foreach>
+            <if test="cond.id != null">
+                ID = #{cond.id}
+            </if>
+            <if test="cond.name != null">
+                AND NAME = #{cond.name}
+            </if>
+            <if test="cond.supervisorId != null">
+                AND SUPERVISOR_ID = #{cond.supervisorId}
+            </if>
+            <if test="cond.pay != null and cond.pay &gt;= 0">
+                AND PAY = #{cond.pay}
+            </if>
         </where>
     </select>
+
+    <!-- 프로젝트 조회 리스트 -->
+<!--    <select id="select"-->
+<!--            parameterType="java.util.List"-->
+<!--            resultType="com.example.layered.project.dto.response.ProjectResponse">-->
+<!--        SELECT-->
+<!--        ID,-->
+<!--        NAME,-->
+<!--        PAY,-->
+<!--        SUPERVISOR_ID,-->
+<!--        CREATEDAT-->
+<!--        FROM PROJECT-->
+<!--        <where>-->
+<!--            <foreach collection="list"-->
+<!--                     item="cond"-->
+<!--                     separator=" OR ">-->
+<!--                (-->
+<!--                <if test="cond.id != null">-->
+<!--                    ID = #{cond.id}-->
+<!--                </if>-->
+<!--                <if test="cond.name != null">-->
+<!--                    AND NAME = #{cond.name}-->
+<!--                </if>-->
+<!--                <if test="cond.supervisorId != null">-->
+<!--                    AND SUPERVISOR_ID = #{cond.supervisorId}-->
+<!--                </if>-->
+<!--                <if test="cond.pay != null and cond.pay &gt;= 0">-->
+<!--                    AND PAY = #{cond.pay}-->
+<!--                </if>-->
+<!--                )-->
+<!--            </foreach>-->
+<!--        </where>-->
+<!--    </select>-->
 
 
 
