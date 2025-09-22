@@ -1,16 +1,14 @@
 package com.example.layered.project.dto.request;
 
-import com.example.layered.project.domain.Project;
-import lombok.Getter;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PositiveOrZero;
+import lombok.Builder;
 
-import java.util.Date;
-
+@Builder
 public record CreateProjectRequest(
-        String name
-        , long pay
-        , String supervisorId) {
-
-    public Project toProject() {
-        return Project.builder().name(this.name).pay(this.pay).build();
-    }
+        @NotBlank String name,
+        @PositiveOrZero long pay,
+        @NotBlank String supervisorId
+) implements BaseProjectRequest {
 }
